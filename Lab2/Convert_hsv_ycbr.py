@@ -1,0 +1,10 @@
+import cv2
+image = cv2.imread('C:/Users/21620/Desktop/maldives.jpg')
+hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+cv2.imwrite('hsv_image.jpg', hsv_image)
+ycbcr_image = cv2.cvtColor(image, cv2.COLOR_BGR2YCrCb)
+cv2.imwrite('ycbcr_image.jpg', ycbcr_image)
+cv2.imshow('hsv_image.jpg', hsv_image)
+cv2.imshow('ycbcr_image.jpg', ycbcr_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
